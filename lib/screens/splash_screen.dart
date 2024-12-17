@@ -1,5 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:gadget_store/routing/app_routes.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(Duration(milliseconds: 500), () {
-
+        context.go(AppRoutes.dashboard);
     },);
   }
 

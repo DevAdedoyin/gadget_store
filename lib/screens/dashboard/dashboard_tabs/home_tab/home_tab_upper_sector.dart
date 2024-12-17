@@ -16,11 +16,12 @@ class HomeTabTop extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(10),
-          bottomLeft: Radius.circular(10),
+          bottomRight: Radius.circular(15),
+          bottomLeft: Radius.circular(15),
         ),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,7 +40,7 @@ class HomeTabTop extends StatelessWidget {
               badges.Badge(
                 badgeStyle: badges.BadgeStyle(
                   badgeColor: AppColors.metaIconColor,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                       color: Colors.white, style: BorderStyle.solid, width: 1),
                 ),
                 badgeContent: Text('4'),
@@ -55,6 +56,25 @@ class HomeTabTop extends StatelessWidget {
                 ),
               )
             ],
+          ),
+          const SizedBox(
+            height: GapSizes.smallGap,
+          ),
+          TextField(
+            decoration: InputDecoration(
+              hintText: "Search the entire shop",
+              prefixIcon: const Icon(Icons.search),
+              filled: true,
+              fillColor: AppColors.secondaryColor,
+              hintStyle: textTheme.labelLarge,
+              // isDense: true,
+              contentPadding: EdgeInsets.symmetric(vertical: 9),
+              isCollapsed: true,
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(15),
+              ),
+            ),
           )
         ],
       ),

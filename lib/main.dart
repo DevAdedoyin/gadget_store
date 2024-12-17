@@ -4,13 +4,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gadget_store/routing/go_router_provider.dart';
 import 'package:gadget_store/screens/dashboard/dashboard_screen.dart';
 import 'package:gadget_store/screens/splash_screen.dart';
+import 'package:gadget_store/themes/theme.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-
-  WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const ProviderScope(child: GadgetStoreApp()));
 }
@@ -23,15 +24,11 @@ class GadgetStoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Gadget Store',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
       routeInformationParser: goRouter.routeInformationParser,
       routeInformationProvider: goRouter.routeInformationProvider,
       routerDelegate: goRouter.routerDelegate,
       debugShowCheckedModeBanner: false,
-
+      theme: AppTheme.lightTheme,
     );
   }
 }

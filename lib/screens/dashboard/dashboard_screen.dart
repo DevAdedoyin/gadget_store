@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gadget_store/repository/bottom_tab_repo.dart';
 import 'package:gadget_store/screens/dashboard/dashboard_tabs/cart.dart';
 import 'package:gadget_store/screens/dashboard/dashboard_tabs/catalog.dart';
 import 'package:gadget_store/screens/dashboard/dashboard_tabs/favorites.dart';
@@ -28,9 +29,10 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
 
-    
+    final bottomNavTab = ref.watch(tabIndex);
+
     return Scaffold(
-      body: dashboardTabs[],
+      body: dashboardTabs[bottomNavTab],
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(

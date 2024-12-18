@@ -16,12 +16,16 @@ class HomeTab extends ConsumerStatefulWidget {
 class _CartTabState extends ConsumerState<HomeTab> {
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      body: SingleChildScrollView(child: Column(children: [
-        const HomeTabTop(),
-        verticalGap(GapSizes.smallGap),
-        const HomeTabBottom()
-      ],),),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const HomeTabTop(),
+            verticalGap(GapSizes.smallGap),
+            const HomeTabBottom()
+          ],
+        ),
+      ),
     );
   }
 }

@@ -101,7 +101,7 @@ class HomeTabTop extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                               vertical: 3, horizontal: 7),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(7),
                               color: Colors.white),
                           alignment: Alignment.center,
                           child: const Text(

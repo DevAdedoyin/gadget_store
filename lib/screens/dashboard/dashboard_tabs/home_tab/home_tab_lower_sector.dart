@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gadget_store/common/gaps.dart';
 import 'package:gadget_store/constants/colors.dart';
+import 'package:gadget_store/constants/font_sizes.dart';
 import 'package:gadget_store/data/category_data.dart';
+import 'package:gadget_store/data/flash_sales.dart';
 
 import '../../../../constants/gap_sizes.dart';
 
@@ -140,19 +142,57 @@ class HomeTabBottom extends StatelessWidget {
               ),
             ],
           ),
-          verticalGap(GapSizes.smallGap),
+          verticalGap(GapSizes.smallestGap),
           SizedBox(
             child: GridView.builder(
                 shrinkWrap: true,
+                itemCount: FlashSaleList.flashSales.length,
+                physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2),
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisExtent: 275),
                 itemBuilder: (_, index) {
-                  return Container(
-                    child: Column(
-                      children: [
-                            
-                      ],
-                    ),
+                  return Column(
+                    children: [
+                      Container(
+                        height: 170,
+                        width: double.maxFinite,
+                        decoration: BoxDecoration(
+                            color: AppColors.secondaryColor,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Center(
+                          child: Image.network(
+                            FlashSaleList.flashSales[index].image,
+                            fit: BoxFit.contain,
+                            height: 120,
+                            width: 120,
+                          ),
+                        ),
+                      ),
+                      verticalGap(GapSizes.smallerGap),
+                      Text(
+                        FlashSaleList.flashSales[index].itemName,
+                        softWrap: true,
+                      ),
+                      verticalGap(GapSizes.smallestGap),
+                      Row(
+                        children: [
+                          Text(FlashSaleList
+                              .flashSales[index].discountedPrice),
+                          horizontalGap(GapSizes.smallestGap),
+                          Text(
+                            FlashSaleList.flashSales[index].originalPrice,
+                            style: const TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w600,
+                              fontSize: FontSizes.smallerFont,
+                              decoration: TextDecoration.lineThrough,
+                            ),
+                          )
+                        ],
+                      )
+                    ],
                   );
                 }),
           )

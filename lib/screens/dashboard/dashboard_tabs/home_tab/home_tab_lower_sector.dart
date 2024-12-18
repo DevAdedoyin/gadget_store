@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gadget_store/common/gaps.dart';
 import 'package:gadget_store/constants/colors.dart';
+import 'package:gadget_store/data/category_data.dart';
 
 import '../../../../constants/gap_sizes.dart';
 
@@ -49,11 +51,41 @@ class HomeTabBottom extends StatelessWidget {
                     child: const Icon(
                       Icons.arrow_forward_ios_rounded,
                       size: 15,
+                      color: Colors.black,
                     ),
                   ),
                 ],
               ),
             ],
+          ),
+          verticalGap(GapSizes.smallGap),
+          SizedBox(
+            height: 100,
+            child: ListView.builder(
+              itemCount: CategoryList.categoryItems.length,
+              itemBuilder: (_, index) {
+                return Container(
+                  margin: const EdgeInsets.only(right: GapSizes.mediumGap),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            color: AppColors.secondaryColor,
+                            borderRadius: BorderRadius.circular(50)),
+                        height: 70,
+                        width: 70,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        child: Image.network(
+                            CategoryList.categoryItems[index].categoryImageLink),
+                      ),
+                      Text(CategoryList.categoryItems[index].categoryName)
+                    ],
+                  ),
+                );
+              },
+              scrollDirection: Axis.horizontal,
+            ),
           )
         ],
       ),

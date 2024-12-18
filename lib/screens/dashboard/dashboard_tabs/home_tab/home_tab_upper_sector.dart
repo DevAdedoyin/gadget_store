@@ -29,7 +29,7 @@ class HomeTabTop extends StatelessWidget {
             children: [
               ClipOval(
                   child: Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       color: AppColors.tertiaryColor,
                       child: const Icon(Icons.settings))),
               Column(
@@ -44,7 +44,7 @@ class HomeTabTop extends StatelessWidget {
                   borderSide: const BorderSide(
                       color: Colors.white, style: BorderStyle.solid, width: 1),
                 ),
-                badgeContent: Text('4'),
+                badgeContent: const Text('4'),
                 child: ClipOval(
                   child: Container(
                     color: AppColors.secondaryColor,
@@ -69,7 +69,7 @@ class HomeTabTop extends StatelessWidget {
               fillColor: AppColors.secondaryColor,
               hintStyle: textTheme.labelLarge,
               // isDense: true,
-              contentPadding: EdgeInsets.symmetric(vertical: 9),
+              contentPadding: const EdgeInsets.symmetric(vertical: 9),
               isCollapsed: true,
               border: OutlineInputBorder(
                 borderSide: BorderSide.none,

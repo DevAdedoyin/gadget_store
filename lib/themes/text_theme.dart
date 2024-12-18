@@ -15,7 +15,7 @@ class AppTextTheme {
         color: Colors.black),
     headlineMedium: const TextStyle().copyWith(
         fontSize: FontSizes.biggerFont,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w700,
         color: Colors.black),
     headlineSmall: const TextStyle().copyWith(
         fontSize: FontSizes.bigFont,
@@ -51,10 +51,14 @@ class AppTextTheme {
         color: Colors.black),
 
     // label theme
-    labelLarge: const TextStyle()
-        .copyWith(fontSize: FontSizes.smallFont, color: Colors.grey),
-    labelMedium: const TextStyle().copyWith(
-        fontSize: FontSizes.smallerFont,
-        color: Colors.grey),
+    labelLarge: const TextStyle().copyWith(
+        fontSize: FontSizes.smallFont,
+        color: Colors.grey,
+        fontWeight: FontWeight.w500),
+    labelSmall: const TextStyle().copyWith(
+        fontSize: FontSizes.smallestFont,
+        color: Colors.grey,),
+    labelMedium: const TextStyle()
+        .copyWith(fontSize: FontSizes.smallerFont, color: Colors.grey),
   );
 }

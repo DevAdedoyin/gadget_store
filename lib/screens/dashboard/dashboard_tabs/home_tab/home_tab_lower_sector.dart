@@ -4,15 +4,19 @@ import 'package:gadget_store/constants/colors.dart';
 import 'package:gadget_store/constants/font_sizes.dart';
 import 'package:gadget_store/data/category_data.dart';
 import 'package:gadget_store/data/flash_sales.dart';
+import 'package:gadget_store/routing/app_routes.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gadget_store/routing/go_router_provider.dart';
 
 import '../../../../constants/gap_sizes.dart';
 
-class HomeTabBottom extends StatelessWidget {
+class HomeTabBottom extends ConsumerStatelessWidget {
   const HomeTabBottom({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    final detailIndex
     return Container(
       width: double.maxFinite,
       padding: const EdgeInsets.symmetric(
@@ -153,46 +157,52 @@ class HomeTabBottom extends StatelessWidget {
                     crossAxisSpacing: 10,
                     mainAxisExtent: 275),
                 itemBuilder: (_, index) {
-                  return Column(
-                    children: [
-                      Container(
-                        height: 170,
-                        width: double.maxFinite,
-                        decoration: BoxDecoration(
-                            color: AppColors.secondaryColor,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Center(
-                          child: Image.network(
-                            FlashSaleList.flashSales[index].image,
-                            fit: BoxFit.contain,
-                            height: 120,
-                            width: 120,
+                  return GestureDetector(
+                    onTap: () {
+                      ref.
+                      goRouter.pushNamed(AppRoutes.detailPage);
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 170,
+                          width: double.maxFinite,
+                          decoration: BoxDecoration(
+                              color: AppColors.secondaryColor,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Center(
+                            child: Image.network(
+                              FlashSaleList.flashSales[index].image,
+                              fit: BoxFit.contain,
+                              height: 120,
+                              width: 120,
+                            ),
                           ),
                         ),
-                      ),
-                      verticalGap(GapSizes.smallerGap),
-                      Text(
-                        FlashSaleList.flashSales[index].itemName,
-                        softWrap: true,
-                      ),
-                      verticalGap(GapSizes.smallestGap),
-                      Row(
-                        children: [
-                          Text(FlashSaleList
-                              .flashSales[index].discountedPrice),
-                          horizontalGap(GapSizes.smallestGap),
-                          Text(
-                            FlashSaleList.flashSales[index].originalPrice,
-                            style: const TextStyle(
-                              color: Colors.grey,
-                              fontWeight: FontWeight.w600,
-                              fontSize: FontSizes.smallerFont,
-                              decoration: TextDecoration.lineThrough,
-                            ),
-                          )
-                        ],
-                      )
-                    ],
+                        verticalGap(GapSizes.smallerGap),
+                        Text(
+                          FlashSaleList.flashSales[index].itemName,
+                          softWrap: true,
+                        ),
+                        verticalGap(GapSizes.smallestGap),
+                        Row(
+                          children: [
+                            Text(FlashSaleList
+                                .flashSales[index].discountedPrice),
+                            horizontalGap(GapSizes.smallestGap),
+                            Text(
+                              FlashSaleList.flashSales[index].originalPrice,
+                              style: const TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w600,
+                                fontSize: FontSizes.smallerFont,
+                                decoration: TextDecoration.lineThrough,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   );
                 }),
           )

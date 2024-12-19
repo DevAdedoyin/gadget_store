@@ -1,15 +1,22 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class DetailPage extends StatefulWidget {
+import '../repository/detail_index.dart';
+
+class DetailPage extends ConsumerStatefulWidget {
   const DetailPage({super.key});
 
   @override
-  State<DetailPage> createState() => _DetailPageState();
+  ConsumerState<DetailPage> createState() => _DetailPageState();
 }
 
-class _DetailPageState extends State<DetailPage> {
+class _DetailPageState extends ConsumerState<DetailPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final detailIndex_ = ref.watch(detailIndex);
+    return const Scaffold(
+
+    );
   }
 }

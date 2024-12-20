@@ -33,7 +33,7 @@ class AppTextTheme {
         color: Colors.black),
     titleSmall: const TextStyle().copyWith(
         fontSize: FontSizes.mediumFont,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w600,
         color: Colors.black),
 
     // label theme

@@ -20,6 +20,7 @@ class HomeTabBottom extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     TextTheme textTheme = Theme.of(context).textTheme;
     final detailIndex_ = ref.watch(detailIndex);
+    final builderIndex_ = ref.watch(builderIndex);
     return Container(
       width: double.maxFinite,
       padding: const EdgeInsets.symmetric(
@@ -162,6 +163,7 @@ class HomeTabBottom extends ConsumerWidget {
                 itemBuilder: (_, index) {
                   return GestureDetector(
                     onTap: () {
+                      ref.read(builderIndex.notifier).state = 0;
                       ref.read(detailIndex.notifier).state = index;
                       context.push(AppRoutes.detailPage);
                     },
@@ -208,7 +210,7 @@ class HomeTabBottom extends ConsumerWidget {
                     ),
                   );
                 }),
-          )
+          ),
         ],
       ),
     );

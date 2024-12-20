@@ -7,16 +7,19 @@ import 'package:gadget_store/data/flash_sales.dart';
 import 'package:gadget_store/routing/app_routes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gadget_store/routing/go_router_provider.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../constants/gap_sizes.dart';
+import '../../../../repository/detail_index.dart';
+import '../../../../routing/go_router_provider.dart';
 
-class HomeTabBottom extends ConsumerStatelessWidget {
+class HomeTabBottom extends ConsumerWidget {
   const HomeTabBottom({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    final detailIndex
+    final detailIndex_ = ref.watch(detailIndex);
     return Container(
       width: double.maxFinite,
       padding: const EdgeInsets.symmetric(
@@ -159,8 +162,8 @@ class HomeTabBottom extends ConsumerStatelessWidget {
                 itemBuilder: (_, index) {
                   return GestureDetector(
                     onTap: () {
-                      ref.
-                      goRouter.pushNamed(AppRoutes.detailPage);
+                      ref.read(detailIndex.notifier).state = index;
+                      context.push(AppRoutes.detailPage);
                     },
                     child: Column(
                       children: [

@@ -162,7 +162,9 @@ class _DetailPageState extends ConsumerState<DetailPage> {
                             Icon(Icons.star, color: AppColors.metaIconColor),
                             Text(FlashSaleList.flashSales[detailIndex_].rating),
                             Text(
-                                "  ${FlashSaleList.flashSales[detailIndex_].reviews} reviews"),
+                              "  ${FlashSaleList.flashSales[detailIndex_].reviews} reviews",
+                              style: textTheme.labelLarge,
+                            ),
                           ],
                         ),
                       ),
@@ -218,22 +220,25 @@ class _DetailPageState extends ConsumerState<DetailPage> {
                         horizontal: GapSizes.smallGap),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: AppColors.secondaryColor),
+                        color: AppColors.metaIconColor),
                     width: double.maxFinite,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                            "${FlashSaleList.flashSales[detailIndex_].discountedPrice}  "),
+                            "${FlashSaleList.flashSales[detailIndex_].discountedPrice}  ", style: textTheme.titleMedium,),
                         Text(
                             "from ${FlashSaleList.flashSales[detailIndex_].pricePerMonth} per month"),
                         const Icon(Icons.info_outlined),
                       ],
                     ),
                   ),
-                  verticalGap(GapSizes.smallGap),
-                  Text(FlashSaleList.flashSales[detailIndex_].description),
-                  verticalGap(GapSizes.smallGap),
+                  verticalGap(GapSizes.bigGap),
+                  Text(
+                    FlashSaleList.flashSales[detailIndex_].description,
+                    style: textTheme.labelLarge,
+                  ),
+                  verticalGap(GapSizes.bigGap),
                   elevatedButton(textTheme, "Add to cart"),
                   verticalGap(GapSizes.smallGap),
                   const Text("Delivery on 23rd June")

@@ -9,6 +9,10 @@
 ## Project Description
 Gadget Store is a modern and responsive e-commerce UI prototype, designed as a practice project. It showcases an intuitive layout, engaging visuals, and essential interface elements for an online gadget shopping experience.
 
+## Download
+<b color="red">To run the app and use on your android device kindly download via the link below.</b>
+### https://drive.google.com/file/d/133PNiISKYAcrA1wIHIFbt4tSJf0BqcjX/view?usp=drive_link
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:

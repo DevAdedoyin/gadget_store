@@ -1,4 +1,4 @@
-# Gadget Store
+# GADGET STORE
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f3235d2c-1d35-499c-a307-06cd49e54c04" width="200"/>
@@ -6,21 +6,28 @@
   <img src="https://github.com/user-attachments/assets/15df4ea4-7281-43cf-ac1e-aaa24c448e1b" width="200"/>
 </p>
 
-## Project Description
-Gadget Store is a modern and responsive e-commerce UI prototype, designed as a practice project. It showcases an intuitive layout, engaging visuals, and essential interface elements for an online gadget shopping experience.
+## TABLE OF CONTENT
+- Project description
+- Video display of the app
+- Download
+- Installation guide and configuration
+- Technologies used
+- Acknowledgments
+- License
 
-## Download
+## PROJECT DESCRIPTION
+Gadget Store is a modern and responsive e-commerce UI prototype, built with Flutter and leveraging Riverpod for state management. Designed as a practice project, it showcases an intuitive layout and engaging visuals.
+
+## VIDEO DISPLAY
+<p align="center">
+https://github.com/user-attachments/assets/9faf635f-fbc2-4bc5-a084-905c4f301492
+</p>
+
+## DOWNLOAD
 <b color="red">To run the app and use on your android device kindly download via the link below.</b>
 ### https://drive.google.com/file/d/133PNiISKYAcrA1wIHIFbt4tSJf0BqcjX/view?usp=drive_link
 
-## Table of Content
-- Installation guide and configuration
-- Features
-- Architecture
-- Contributing
-- License
-
-## Installation guide and Configuration
+## INSTALLATION GUIDE AND CONFIGURATION
 ### The installation process for this project is very straightforward.
 1. Fork the repository.
 2. Run, <b><i>git clone 'repo-link'</i></b> on your git.
@@ -28,3 +35,17 @@ Gadget Store is a modern and responsive e-commerce UI prototype, designed as a p
 
 ### ALTERNATIVE INSTALLATION
 1. Install directly using the link shared in the Download section of this file
+
+## TECHNOLOGY USED
+- Flutter: For building the UI.
+- Riverpod: The state management used for this project, ensuring a reactive and maintainable application structure.
+- GoRouter: Used for routing to enable smooth navigation between screens.
+
+## ACKNOWLEDGEMENTS
+### UI Source
+- https://dribbble.com/shots/22831990-Ecommerce-App-Concept
+### Assets and Image Sources
+- Most images used in this project were sourced from EE Store and Pixabay.
+
+## LICENSE
+- See the LICENSE.md file for license rights and limitations (MIT).

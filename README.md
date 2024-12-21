@@ -20,12 +20,8 @@ Gadget Store is a modern and responsive e-commerce UI prototype, built with Flut
 
 ## VIDEO DISPLAY
 <p align="center">
-  <video width="600" controls>
-    <source src="https://github.com/user-attachments/assets/9faf635f-fbc2-4bc5-a084-905c4f301492" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <br>
-  <strong>App Demo: Gadget Store UI</strong>
+  <a href="https://github.com/user-attachments/assets/9faf635f-fbc2-4bc5-a084-905c4f301492" target="_blank">
+  </a>
 </p>
 
 ## DOWNLOAD

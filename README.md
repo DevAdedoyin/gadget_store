@@ -19,10 +19,7 @@
 Gadget Store is a modern and responsive e-commerce UI prototype, built with Flutter and leveraging Riverpod for state management. Designed as a practice project, it showcases an intuitive layout and engaging visuals.
 
 ## VIDEO DISPLAY
-<p align="center">
-  <a href="https://github.com/user-attachments/assets/9faf635f-fbc2-4bc5-a084-905c4f301492" target="_blank">
-  </a>
-</p>
+<a href="https://github.com/user-attachments/assets/9faf635f-fbc2-4bc5-a084-905c4f301492" align="center" target="_blank"></a>
 
 ## DOWNLOAD
 <b color="red">To run the app and use on your android device kindly download via the link below.</b>

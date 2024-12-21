@@ -6,7 +6,8 @@
   <img src="https://github.com/user-attachments/assets/15df4ea4-7281-43cf-ac1e-aaa24c448e1b" width="200"/>
 </p>
 
-## Getting Started
+## Project Description
+Gadget Store is a modern and responsive e-commerce UI prototype, designed as a practice project. It showcases an intuitive layout, engaging visuals, and essential interface elements for an online gadget shopping experience.
 
 This project is a starting point for a Flutter application.
 

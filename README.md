@@ -13,13 +13,18 @@ Gadget Store is a modern and responsive e-commerce UI prototype, designed as a p
 <b color="red">To run the app and use on your android device kindly download via the link below.</b>
 ### https://drive.google.com/file/d/133PNiISKYAcrA1wIHIFbt4tSJf0BqcjX/view?usp=drive_link
 
-This project is a starting point for a Flutter application.
+## Table of Content
+- Installation guide and configuration
+- Features
+- Architecture
+- Contributing
+- License
 
-A few resources to get you started if this is your first Flutter project:
+## Installation guide and Configuration
+### The installation process for this project is very straightforward.
+1. Fork the repository.
+2. Run, <b><i>git clone 'repo-link'</i></b> on your git.
+3. Run the app on your favorite IDE with<b><i>flutter run</i></b> or any other method you use in running your flutter app.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### ALTERNATIVE INSTALLATION
+1. Install directly using the link shared in the Download section of this file
